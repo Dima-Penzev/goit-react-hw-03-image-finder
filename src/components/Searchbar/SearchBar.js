@@ -14,7 +14,7 @@ class SearchBar extends Component {
     e.preventDefault();
 
     if (this.state.imageSearch.trim() === "") {
-      alert("Введите что-нибудь в строку для поиска");
+      alert("Введите запрос в строку для поиска");
       return;
     }
     this.props.onSubmit(this.state.imageSearch);
@@ -33,7 +33,6 @@ class SearchBar extends Component {
             className={s.SearchFormInput}
             type="text"
             autoComplete="off"
-            autoFocus
             placeholder="Search images and photos"
             value={this.state.imageSearch}
             onChange={this.handleNameChange}
