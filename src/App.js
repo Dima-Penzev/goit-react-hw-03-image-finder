@@ -44,12 +44,13 @@ class App extends Component {
       )
       .catch((error) => {
         alert(`При загрузке изображений произошла ошибка ${error}`);
+      })
+      .finally(() => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
       });
-
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
   };
 
   modalOpen = (largeImage) => {
